@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blood Donation Connection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="logo-icon">+</div>
+      <h1>Blood Donation Connection</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active" id="home-link">Home</a></li>
+        <li><a href="#" id="register-link">Register as Donor</a></li>
+        <li><a href="#" id="find-link">Find Donor</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Page -->
+    <section id="home-page" class="page active">
+      <div class="hero">
+        <div class="hero-content">
+          <h2>Save Lives with<br><span class="highlight">Blood Donation</span></h2>
+          <p>Connect with donors and recipients in your area. Every donation counts and can save up to three lives.</p>
+          <div class="cta-buttons">
+            <button id="register-btn" class="btn primary-btn">Register as Donor</button>
+            <button id="find-btn" class="btn secondary-btn">Find a Donor</button>
+          </div>
+          <div class="donor-count">
+            <span>Registered donors:</span>
+            <span id="donor-count-number" class="highlight-count">0</span>
+          </div>
+        </div>
+        <div class="stats-card">
+          <div class="stats-header">
+            <h3>Blood Type Statistics</h3>
+            <p>Available donors by blood group</p>
+          </div>
+          <div class="stats-grid">
+            <div class="stats-row">
+              <div class="stats-item"><span>A+</span><span id="count-aplus" class="highlight-count">0</span></div>
+              <div class="stats-item"><span>A-</span><span id="count-aminus" class="highlight-count">0</span></div>
+            </div>
+            <div class="stats-row">
+              <div class="stats-item"><span>B+</span><span id="count-bplus" class="highlight-count">0</span></div>
+              <div class="stats-item"><span>B-</span><span id="count-bminus" class="highlight-count">0</span></div>
+            </div>
+            <div class="stats-row">
+              <div class="stats-item"><span>AB+</span><span id="count-abplus" class="highlight-count">0</span></div>
+              <div class="stats-item"><span>AB-</span><span id="count-abminus" class="highlight-count">0</span></div>
+            </div>
+            <div class="stats-row">
+              <div class="stats-item"><span>O+</span><span id="count-oplus" class="highlight-count">0</span></div>
+              <div class="stats-item"><span>O-</span><span id="count-ominus" class="highlight-count">0</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features">
+        <h3>How It Works</h3>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">📝</div>
+            <h4>Register</h4>
+            <p>Sign up as a donor with your blood type and location information.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h4>Search</h4>
+            <p>Find donors by blood type when you or someone needs blood.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon">🤝</div>
+            <h4>Connect</h4>
+            <p>Get connected with nearby donors to arrange donation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Register Page -->
+    <section id="register-page" class="page">
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Register as a Blood Donor</h2>
+          <p>Join our network of life-savers</p>
+        </div>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" value="+91"  placeholder="Enter your contact number" required>
+          </div>
+          <div class="form-group">
+            <label for="bloodGroup">Blood Group</label>
+            <select id="bloodGroup" required>
+              <option value="" disabled selected>Select your blood group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="Enter your city or area" required>
+          </div>
+          <button type="submit" class="btn primary-btn form-btn">Register as Donor</button>
+        </form>
+      </div>
+
+      <div class="info-box">
+        <h3>Why Become a Donor?</h3>
+        <ul class="benefits-list">
+          <li>A single donation can save up to three lives</li>
+          <li>Blood cannot be manufactured – it can only come from donors</li>
+          <li>Every 2 seconds someone needs blood</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Find Donor Page -->
+    <section id="find-page" class="page">
+      <div class="form-container">
+        <div class="form-header">
+          <h2>Find a Blood Donor</h2>
+          <p>Search for available donors by blood type</p>
+        </div>
+        <form id="search-form">
+          <div class="form-group">
+            <label for="searchBloodGroup">Blood Group Needed</label>
+            <select id="searchBloodGroup" required>
+              <option value="" disabled selected>Select blood group</option>
+              <option value="A+">A+</option>
+              <option value="A-">A-</option>
+              <option value="B+">B+</option>
+              <option value="B-">B-</option>
+              <option value="AB+">AB+</option>
+              <option value="AB-">AB-</option>
+              <option value="O+">O+</option>
+              <option value="O-">O-</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="searchLocation">Location (Optional)</label>
+            <input type="text" id="searchLocation" placeholder="Enter city or area">
+          </div>
+          <button type="submit" class="btn primary-btn form-btn">Find Donors</button>
+        </form>
+      </div>
+
+      <div class="compatibility-table">
+        <h3>Compatible Blood Types</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Blood Type</th>
+              <th>Can Receive From</th>
+              <th>Can Donate To</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>A+</td>
+              <td>A+, A-, O+, O-</td>
+              <td>A+, AB+</td>
+            </tr>
+            <tr>
+              <td>A-</td>
+              <td>A-, O-</td>
+              <td>A+, A-, AB+, AB-</td>
+            </tr>
+            <tr>
+              <td>B+</td>
+              <td>B+, B-, O+, O-</td>
+              <td>B+, AB+</td>
+            </tr>
+            <tr>
+              <td>B-</td>
+              <td>B-, O-</td>
+              <td>B+, B-, AB+, AB-</td>
+            </tr>
+            <tr>
+              <td>AB+</td>
+              <td>A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+              <td>AB+</td>
+            </tr>
+            <tr>
+              <td>AB-</td>
+              <td>A-, B-, AB-, O-</td>
+              <td>AB+, AB-</td>
+            </tr>
+            <tr>
+              <td>O+</td>
+              <td>O+, O-</td>
+              <td>A+, B+, AB+, O+</td>
+            </tr>
+            <tr>
+              <td>O-</td>
+              <td>O-</td>
+              <td>A+, A-, B+, B-, AB+, AB-, O+, O-</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div id="search-results" class="search-results">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Blood Donation Connection</h3>
+        <p>Connecting blood donors with those in need, one donation at a time.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#" id="footer-home-link">Home</a></li>
+          <li><a href="#" id="footer-register-link">Register as Donor</a></li>
+          <li><a href="#" id="footer-find-link">Find a Donor</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>📧 sj654431@gmail.com</p>
+        <p>📞 89378167309</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Blood Donation Connection. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="notification" class="notification hide">
+    <div class="notification-content">
+      <span class="notification-message">Notification message</span>
+      <button class="notification-close">&times;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
